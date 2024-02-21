@@ -12,7 +12,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
   const product = await getProduct(params.productId);
   const suggestedProducts = await getProducts({
     // @ts-ignore
-    // TODO: FIX the ts(2339) error
+    // TODO: fix Property 'name' does not exist on type 'string'
     categoryId: product?.category?.id,
   });
   return (
